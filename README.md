@@ -14,5 +14,5 @@ Aura Health je virtualna apoteka koja korisnicima omogućava:
 
 ## Autor
 Amina Mahmutović – Junior Web Developer  
-📍 Sarajevo, BiH | ✉️ amina.mahmutovic64@gmail.com
+📍 Tuzla, BiH | ✉️ amina.mahmutovic64@gmail.com
 
