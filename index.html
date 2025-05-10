@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Health - Virtuelna Apoteka</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+
+   
+</head>
+<body>
+    <header class="hero-header">
+        <div class="hero-content">
+            <h1>Aura Health</h1>
+            <p class="slogan">Zdravlje vam je na dohvat ruke.</p>
+            <nav>
+                <ul>
+                    <li><a href="#pocetna">Početna</a></li>
+                    <li><a href="#kategorije">Kategorije</a></li>
+                    <li><a href="#simptomi">Pretraga simptoma</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="kategorije" class="kategorije">
+        <h2>Kategorije</h2>
+        <div class="kategorije-container">
+            <div class="kartica">
+                <img src="img/njega_lica.jpg" alt="Njega lica">
+                <h3>Njega lica</h3>
+                <a href="njega.html">Vidi više</a>
+
+            </div>
+            <div class="kartica">
+                <img src="img/dodaci.jpg" alt="Dodaci prehrani">
+                <h3>Dodaci prehrani</h3>
+                <a href="dodaci.html">Vidi više</a>
+            </div>
+            <div class="kartica">
+                <img src="img/promo.jpg" alt="Promo pakovanja">
+                <h3>Promo pakovanja</h3>
+                <a href="promo.html">Vidi više</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="simptomi" class="simptomi">
+        <h2>Pretraga simptoma</h2>
+        <form id="symptomForm">
+            <input type="text" id="symptomInput" placeholder="Unesite simptom (npr. glavobolja)">
+            <button type="submit">Pretraži</button>
+        </form>
+        <div id="rezultat"></div>
+    </section>
+    
+    <section id="kontakt" class="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <form class="kontakt-forma" action="kontakt.php" method="post">
+            <input type="text" name="ime" placeholder="Vaše ime" required>
+            <input type="email" name="email" placeholder="Vaš email" required>
+            <textarea name="poruka" placeholder="Vaša poruka..." required></textarea>
+            <button type="submit">Pošalji poruku</button>
+          </form>
+          
+      </section>
+      
+    
+    <footer>
+        <p>&copy; 2025 Aura Health</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!-- CHAT HTML -->
+<button id="chat-icon">💬</button>
+
+<div id="chat-container">
+  <div id="chat-box"></div>
+  <input id="chat-input" type="text" placeholder="Unesi poruku..." />
+  <button id="chat-send">Pošalji</button>
+</div>
+
+<!-- CHAT SCRIPT -->
+<script>
+document.getElementById('chat-icon').onclick = () => {
+    const c = document.getElementById('chat-container');
+    c.style.display = c.style.display === 'none' ? 'block' : 'none';
+};
+
+document.getElementById('chat-send').onclick = sendMessage;
+
+function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const box = document.getElementById('chat-box');
+    const message = input.value.trim();
+    if (!message) return;
+
+    box.innerHTML += `<div><b>Ti:</b> ${message}</div>`;
+    input.value = '';
+
+    fetch('chatbot.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message })
+    })
+    .then(res => res.json())
+    .then(data => {
+        const reply = data.choices[0].message.content;
+        box.innerHTML += `<div><b>Bot:</b> ${reply}</div>`;
+        box.scrollTop = box.scrollHeight;
+    })
+    .catch(() => {
+        box.innerHTML += `<div><i>Greška u komunikaciji.</i></div>`;
+    });
+}
+</script>
+
+
+</body>
+</html>

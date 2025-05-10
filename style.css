@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #e0f7ff;
+    color: #333;
+}
+
+
+
+
+header {
+    background-color: #1c90f3;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #1c90f3;
+    color: white;
+}
+
+.hero-header {
+    background-image: url("img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    background-color: rgba(21, 18, 113, 0.521); /* prozirni sloj za bolju čitljivost */
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.slogan {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #eeeeff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #aad4ff;
+}
+
+.kategorije {
+    padding: 50px 20px;
+    background-color: #f5fbff;
+    text-align: center;
+}
+
+.kategorije h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #1c90f3;
+}
+
+.kategorije-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.kartica {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.kartica:hover {
+    transform: translateY(-5px);
+}
+
+.kartica img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.kartica h3 {
+    margin: 15px 0;
+    color: #333;
+}
+
+.kartica a {
+    text-decoration: none;
+    color: #1c90f3;
+    font-weight: bold;
+}
+
+
+.simptomi {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.simptomi h2 {
+    color: #1c90f3;
+    margin-bottom: 20px;
+}
+
+#symptomForm {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#symptomInput {
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#symptomForm button {
+    padding: 10px 20px;
+    background-color: #1c90f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#rezultat {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#rezultat {
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e0f3ff;
+    border-left: 6px solid #1c90f3;
+    border-radius: 10px;
+    color: #333;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.back-home {
+    text-align: center;
+    margin: 40px auto 20px;
+}
+
+.back-home a {
+    display: inline-block;
+    background-color: #1c90f3;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-home a:hover {
+    background-color: #0f6ec3;
+}
+
+
+.kontakt {
+    background-color: #f0f8ff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.kontakt h2 {
+    color: #1c90f3;
+    margin-bottom: 30px;
+}
+
+.kontakt-forma {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.kontakt-forma textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+.kontakt-forma button {
+    background-color: #1c90f3;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.kontakt-forma button:hover {
+    background-color: #0f6ec3;
+}
+
+
+
+  #chat-icon {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  #chat-container {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 300px;
+    height: 400px;
+    background: #f0f4ff;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    z-index: 9998;
+    padding: 15px;
+  }
+
+  #chat-box {
+    overflow-y: auto;
+    height: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  #chat-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+  }
+
+  #chat-send {
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+  }
