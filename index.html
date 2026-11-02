@@ -1,123 +1,142 @@
 <!DOCTYPE html>
-<html lang="bs">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura Health - Virtuelna Apoteka</title>
+    <meta name="description" content="Aura Health is an online pharmacy prototype with a product catalogue, a symptom guide and a contact form.">
+    <title>Aura Health – Online Pharmacy</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/script.js"></script>
-
-   
 </head>
 <body>
-    <header class="hero-header">
-        <div class="hero-content">
-            <h1>Aura Health</h1>
-            <p class="slogan">Zdravlje vam je na dohvat ruke.</p>
-            <nav>
-                <ul>
-                    <li><a href="#pocetna">Početna</a></li>
-                    <li><a href="#kategorije">Kategorije</a></li>
-                    <li><a href="#simptomi">Pretraga simptoma</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+    <header class="site-header">
+        <div class="container">
+            <a class="logo" href="index.html">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0e7c86"/><path d="M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z" fill="#fff"/></svg>
+                Aura Health
+            </a>
+            <nav aria-label="Main">
+                <ul class="nav-links">
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#symptom-guide">Symptom guide</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
-    <section id="kategorije" class="kategorije">
-        <h2>Kategorije</h2>
-        <div class="kategorije-container">
-            <div class="kartica">
-                <img src="img/njega_lica.jpg" alt="Njega lica">
-                <h3>Njega lica</h3>
-                <a href="njega.html">Vidi više</a>
 
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div>
+                    <h1>Your pharmacy, one click away.</h1>
+                    <p>Browse everyday health and skincare products and get general guidance for common, minor symptoms.</p>
+                    <div class="hero-actions">
+                        <a class="button button-light" href="#categories">Browse products</a>
+                        <a class="button button-outline" href="#symptom-guide">Check a symptom</a>
+                    </div>
+                </div>
+                <svg class="hero-art" viewBox="0 0 320 320" aria-hidden="true">
+                    <circle cx="160" cy="160" r="150" fill="rgba(255,255,255,0.12)"/>
+                    <circle cx="160" cy="160" r="105" fill="rgba(255,255,255,0.15)"/>
+                    <g transform="rotate(-35 160 160)">
+                        <rect x="95" y="128" width="130" height="64" rx="32" fill="#fff"/>
+                        <path d="M160 128h33a32 32 0 0 1 0 64h-33z" fill="#f2a541"/>
+                    </g>
+                    <path d="M232 70h14v14h14v14h-14v14h-14V98h-14V84h14z" fill="#fff"/>
+                    <circle cx="82" cy="240" r="10" fill="#fff" opacity="0.8"/>
+                </svg>
             </div>
-            <div class="kartica">
-                <img src="img/dodaci.jpg" alt="Dodaci prehrani">
-                <h3>Dodaci prehrani</h3>
-                <a href="dodaci.html">Vidi više</a>
+        </section>
+
+        <section id="categories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Shop by category</h2>
+                    <p>Hand-picked essentials for everyday wellbeing.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="icon-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M12 3c-3.5 4-6 7.2-6 10.5A6 6 0 0 0 18 13.5C18 10.2 15.5 7 12 3z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+                        </div>
+                        <h3>Skin care</h3>
+                        <p>Cleansers, moisturisers and sun protection for healthy, hydrated skin.</p>
+                        <a class="card-link" href="skin-care.html">View products →</a>
+                    </article>
+                    <article class="card">
+                        <div class="icon-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-35 12 12)"/><path d="M10.3 7.5l3.4 9"/></svg>
+                        </div>
+                        <h3>Supplements</h3>
+                        <p>Vitamins and minerals that support immunity, energy and recovery.</p>
+                        <a class="card-link" href="supplements.html">View products →</a>
+                    </article>
+                    <article class="card">
+                        <div class="icon-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18v11H3z"/><path d="M2 5h20v4H2z"/><path d="M12 5v15"/><path d="M12 5c-1.5-3-5-3-5 0M12 5c1.5-3 5-3 5 0"/></svg>
+                        </div>
+                        <h3>Value bundles</h3>
+                        <p>Complementary products packed together at a lower price.</p>
+                        <a class="card-link" href="bundles.html">View products →</a>
+                    </article>
+                </div>
             </div>
-            <div class="kartica">
-                <img src="img/promo.jpg" alt="Promo pakovanja">
-                <h3>Promo pakovanja</h3>
-                <a href="promo.html">Vidi više</a>
+        </section>
+
+        <section id="symptom-guide" class="symptom-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Symptom guide</h2>
+                    <p>Type a common symptom to see general self-care tips and the kind of product a pharmacist might suggest.</p>
+                </div>
+                <form id="symptom-form" class="symptom-form" role="search">
+                    <label for="symptom-input" class="visually-hidden">Symptom</label>
+                    <input type="text" id="symptom-input" list="symptom-list" placeholder="e.g. headache, sore throat, heartburn" autocomplete="off">
+                    <datalist id="symptom-list"></datalist>
+                    <button type="submit" class="button button-primary">Search</button>
+                </form>
+                <div id="symptom-chips" class="chips" aria-label="Common symptoms"></div>
+                <div id="symptom-result" class="result-card" aria-live="polite" hidden></div>
+                <p class="disclaimer">This guide provides general information only and is not a substitute for professional medical advice. Always ask a pharmacist or doctor before taking any medication. In an emergency, call 124.</p>
             </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact us</h2>
+                    <p>Questions about a product or an order? Send us a message.</p>
+                </div>
+                <form class="contact-form" action="contact.php" method="post">
+                    <label>
+                        Name
+                        <input type="text" name="name" maxlength="100" required>
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" name="email" maxlength="150" required>
+                    </label>
+                    <label>
+                        Message
+                        <textarea name="message" maxlength="2000" required></textarea>
+                    </label>
+                    <label class="honeypot" aria-hidden="true">
+                        Website
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                    </label>
+                    <button type="submit" class="button button-primary">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Aura Health. Student project.</p>
+            <p>Information on this site is not medical advice.</p>
         </div>
-    </section>
-    
-    <section id="simptomi" class="simptomi">
-        <h2>Pretraga simptoma</h2>
-        <form id="symptomForm">
-            <input type="text" id="symptomInput" placeholder="Unesite simptom (npr. glavobolja)">
-            <button type="submit">Pretraži</button>
-        </form>
-        <div id="rezultat"></div>
-    </section>
-    
-    <section id="kontakt" class="kontakt">
-        <h2>Kontaktirajte nas</h2>
-        <form class="kontakt-forma" action="kontakt.php" method="post">
-            <input type="text" name="ime" placeholder="Vaše ime" required>
-            <input type="email" name="email" placeholder="Vaš email" required>
-            <textarea name="poruka" placeholder="Vaša poruka..." required></textarea>
-            <button type="submit">Pošalji poruku</button>
-          </form>
-          
-      </section>
-      
-    
-    <footer>
-        <p>&copy; 2025 Aura Health</p>
     </footer>
 
-    <script src="js/script.js"></script>
-
-    <!-- CHAT HTML -->
-<button id="chat-icon">💬</button>
-
-<div id="chat-container">
-  <div id="chat-box"></div>
-  <input id="chat-input" type="text" placeholder="Unesi poruku..." />
-  <button id="chat-send">Pošalji</button>
-</div>
-
-<!-- CHAT SCRIPT -->
-<script>
-document.getElementById('chat-icon').onclick = () => {
-    const c = document.getElementById('chat-container');
-    c.style.display = c.style.display === 'none' ? 'block' : 'none';
-};
-
-document.getElementById('chat-send').onclick = sendMessage;
-
-function sendMessage() {
-    const input = document.getElementById('chat-input');
-    const box = document.getElementById('chat-box');
-    const message = input.value.trim();
-    if (!message) return;
-
-    box.innerHTML += `<div><b>Ti:</b> ${message}</div>`;
-    input.value = '';
-
-    fetch('chatbot.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message })
-    })
-    .then(res => res.json())
-    .then(data => {
-        const reply = data.choices[0].message.content;
-        box.innerHTML += `<div><b>Bot:</b> ${reply}</div>`;
-        box.scrollTop = box.scrollHeight;
-    })
-    .catch(() => {
-        box.innerHTML += `<div><i>Greška u komunikaciji.</i></div>`;
-    });
-}
-</script>
-
-
+    <script src="js/symptom-guide.js"></script>
 </body>
 </html>
